@@ -5,11 +5,13 @@
  */
 package DTOs;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class FerryDTO {
+public class FerryDTO implements Serializable{
     
     private int id, maxPeople, maxCar, maxLorry, maxMachinery, ownerId;
     private boolean movableDeck, outOfService;

@@ -5,11 +5,13 @@
  */
 package DTOs;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class HarborDTO {
+public class HarborDTO implements Serializable{
     
     private int id;
     private String name;

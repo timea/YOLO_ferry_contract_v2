@@ -5,11 +5,13 @@
  */
 package DTOs;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class DiscountDTO {
+public class DiscountDTO implements Serializable{
     
     private int id;
     private String name;

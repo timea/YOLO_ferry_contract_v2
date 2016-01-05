@@ -5,13 +5,14 @@
  */
 package DTOs;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class ScheduleDTO {
+public class ScheduleDTO implements Serializable {
     
     private int id;
     private Timestamp departureTime;

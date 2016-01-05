@@ -5,13 +5,14 @@
  */
 package DTOs;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class OrderDTO {
+public class OrderDTO implements Serializable {
     
     private int id, customerId, routeId, nrOfPassangers;
     private ScheduleDTO schedule;

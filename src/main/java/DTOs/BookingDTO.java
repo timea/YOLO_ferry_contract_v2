@@ -5,13 +5,14 @@
  */
 package DTOs;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class BookingDTO {
+public class BookingDTO implements Serializable {
     
     private CustomerDTO customer;
     private RouteDTO route;

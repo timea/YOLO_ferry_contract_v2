@@ -5,11 +5,13 @@
  */
 package DTOs;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class RouteDTO {
+public class RouteDTO implements Serializable{
     
     private int id;
     private HarborDTO departureHarbor, arrivalHarbor;

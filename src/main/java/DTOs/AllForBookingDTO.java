@@ -5,13 +5,14 @@
  */
 package DTOs;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class AllForBookingDTO {
+public class AllForBookingDTO implements Serializable {
     
     private Collection<RouteDTO> routes;
     private Collection<DiscountDTO> discounts;

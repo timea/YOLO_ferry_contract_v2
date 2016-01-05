@@ -5,11 +5,13 @@
  */
 package DTOs;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class RestrictionDTO {
+public class RestrictionDTO implements Serializable{
     
     private int id;
     private String name, description;

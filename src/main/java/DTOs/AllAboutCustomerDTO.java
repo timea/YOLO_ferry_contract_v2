@@ -5,13 +5,14 @@
  */
 package DTOs;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class AllAboutCustomerDTO {
+public class AllAboutCustomerDTO implements Serializable{
     
     private String firstName, lastName, type, street, zip, floor, door, country;
     private String username, password;

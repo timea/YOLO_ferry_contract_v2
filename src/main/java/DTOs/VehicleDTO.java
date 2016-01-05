@@ -5,11 +5,13 @@
  */
 package DTOs;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class VehicleDTO {
+public class VehicleDTO implements Serializable {
     
     private int id, size;
     private String name;
