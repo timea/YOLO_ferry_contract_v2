@@ -5,33 +5,60 @@
  */
 package contracts;
 
+import DTOs.AllAboutCustomerDTO;
+import DTOs.AllForBookingDTO;
 import DTOs.BookingDTO;
-import DTOs.RouteDTO;
+import DTOs.CustomerDTO;
+import DTOs.OrderDTO;
+import ETOs.NoTransactionETO;
+import ETOs.NoConnectionETO;
+import ETOs.NoCustomerETO;
 import java.util.Collection;
+import javax.ejb.Remote;
 
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public interface CustomerContract {
+@Remote
+public interface CustomerContract{
     
+    /**
+     * Gets every information for the customer front end to create a booking
+     * @pre there is a connection to the backend
+     * @throws NoConnectionETO the booking could not be created
+     * @post all the information about routes, timetables, harbors, availability 
+     * for vehicles on board are sent to the front end
+     * @return the object containing all information
+     */
+     public AllForBookingDTO getAllForBooking() throws NoConnectionETO;
     
-        /**
+    /**
      * Books a ticket for one or more people and their vehicle
      * @pre
-     *  @param booking all the needed information to book a ticket/tickets for a user
-     * @throws DataNoTransactionDTO the booking could not be created
+     * @param booking all the needed information to book a ticket/tickets for a user
+     * @throws NoTransactionETO the booking could not be created
      * @post
-     *  @return the result if the booking was successfully made or not
+     * @return the result if the booking was successfully made or not
      */
-    public boolean book(BookingDTO booking);
+    public boolean book(BookingDTO booking) throws NoTransactionETO;
+   
+    public boolean createCustomer(CustomerDTO customer) throws NoTransactionETO;
+    
+    public boolean editCustomer(CustomerDTO editedCustomer, int customerId) throws NoCustomerETO;
+    
     /**
-     * This will return all the data about the different routes in the system
-     * This will include harbors and timetables
-     * @pre 
-     *  @throws DataNoFetchETO if the data can't be fetched
-     * @post return all information about the different routes
-     *  @return the Collection with all the routes in the system 
+     * Shows all the information about the customer
+     * @pre the customer is logged in
+     * @param email the unique email address of the user
+     * @throws NoCustomerETO there is no such account
+     * @post all the information, including the purchase history is available to the front end
+     * @return the object containing all the information
      */
-    public Collection<RouteDTO> getRouteList();
+    public AllAboutCustomerDTO getAllAboutCustomer(String email) throws NoCustomerETO;
+    
+    public Collection<OrderDTO> getCustomerHistory(int customerId);
+    
+    public void editBooking(BookingDTO editedBooking, int bookingId) throws NoTransactionETO;
+    
 }

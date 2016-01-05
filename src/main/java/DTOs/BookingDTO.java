@@ -5,12 +5,46 @@
  */
 package DTOs;
 
+import java.util.Collection;
+
 /**
  *
  * @author Timea Kiss hello@timeakiss.com
  */
 public class BookingDTO {
     
-    
+    private CustomerDTO customer;
+    private RouteDTO route;
+    private Collection<DiscountDTO> discounts;
+
+    public BookingDTO(CustomerDTO customer, RouteDTO route, Collection<DiscountDTO> discounts) {
+        this.customer = customer;
+        this.route = route;
+        this.discounts = discounts;
+    }
+
+    public CustomerDTO getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(CustomerDTO customer) {
+        this.customer = customer;
+    }
+
+    public RouteDTO getRoute() {
+        return route;
+    }
+
+    public void setRoute(RouteDTO route) {
+        this.route = route;
+    }
+
+    public Collection<DiscountDTO> getDiscounts() {
+        return discounts;
+    }
+
+    public void setDiscounts(Collection<DiscountDTO> discounts) {
+        this.discounts = discounts;
+    }
     
 }

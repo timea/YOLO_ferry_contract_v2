@@ -9,14 +9,16 @@ package DTOs;
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class HarborDTO {
+public class DiscountDTO {
     
     private int id;
     private String name;
+    private int percent;
 
-    public HarborDTO(int id, String name) {
+    public DiscountDTO(int id, String name, int percent) {
         this.id = id;
         this.name = name;
+        this.percent = percent;
     }
 
     public int getId() {
@@ -34,5 +36,15 @@ public class HarborDTO {
     public void setName(String name) {
         this.name = name;
     }
+
+    public int getPercent() {
+        return percent;
+    }
+
+    public void setPercent(int percent) {
+        this.percent = percent;
+    }
+    
+    
     
 }

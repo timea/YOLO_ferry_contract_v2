@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DTOs;
+
+package ETOs;
 
 /**
  *
- * @author Timea Kiss hello@timeakiss.com
+ * @author Timea Kiss <cph-tk10@cphbusiness.dk>
  */
-public class AccountDTO {
+public class NoFerryETO extends Exception {
+   
+    
+    public NoFerryETO(String message) {
+        super(message);
+    }
     
 }

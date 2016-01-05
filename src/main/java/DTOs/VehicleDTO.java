@@ -9,13 +9,14 @@ package DTOs;
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class HarborDTO {
+public class VehicleDTO {
     
-    private int id;
+    private int id, size;
     private String name;
 
-    public HarborDTO(int id, String name) {
+    public VehicleDTO(int id, int size, String name) {
         this.id = id;
+        this.size = size;
         this.name = name;
     }
 
@@ -27,6 +28,14 @@ public class HarborDTO {
         this.id = id;
     }
 
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
     public String getName() {
         return name;
     }
@@ -34,5 +43,5 @@ public class HarborDTO {
     public void setName(String name) {
         this.name = name;
     }
-    
+  
 }

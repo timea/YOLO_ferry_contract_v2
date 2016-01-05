@@ -9,14 +9,15 @@ package DTOs;
  *
  * @author Timea Kiss hello@timeakiss.com
  */
-public class HarborDTO {
+public class RestrictionDTO {
     
     private int id;
-    private String name;
+    private String name, description;
 
-    public HarborDTO(int id, String name) {
+    public RestrictionDTO(int id, String name, String description) {
         this.id = id;
         this.name = name;
+        this.description = description;
     }
 
     public int getId() {
@@ -33,6 +34,14 @@ public class HarborDTO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
     
 }
