@@ -43,7 +43,7 @@ public interface CustomerContract{
      */
     public boolean book(BookingDTO booking) throws NoTransactionETO;
    
-    public boolean createCustomer(CustomerDTO customer) throws NoTransactionETO;
+    public CustomerDTO createCustomer(CustomerDTO customer);
     
     public boolean editCustomer(CustomerDTO editedCustomer, int customerId) throws NoCustomerETO;
     
