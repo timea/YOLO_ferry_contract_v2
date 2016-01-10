@@ -116,5 +116,9 @@ public interface AdminContract extends CustomerContract{
      * @return the Collection of all the discounts 
      */
     public Collection<DiscountDTO> getAllDiscounts() throws NoDiscountETO; 
+ 
+    public boolean createHarbor(HarborDTO harbor) throws NoTransactionETO;
+    
+    public boolean createSchedule(ScheduleDTO schedule) throws NoTransactionETO;
     
 }
